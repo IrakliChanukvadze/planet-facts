@@ -1,0 +1,39 @@
+@import url("https://fonts.googleapis.com/css2?family=Antonio:wght@300;400;500;600;700&family=Montserrat:ital,wght@0,400;0,500;0,600;0,800;1,400;1,500;1,600;1,800&display=swap");
+.navContainer {
+  height: 85px;
+  background-color: transparent;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0px 20px;
+  color: #fff;
+}
+
+.navTitle {
+  font-family: "Antonio";
+  font-style: normal;
+  font-weight: 400;
+  font-size: 28px;
+  line-height: 36px;
+  letter-spacing: -1.05px;
+  text-transform: uppercase;
+}
+
+.links {
+  text-decoration: none;
+  color: #fff;
+  margin-left: 0.8rem;
+  font-family: "Spartan";
+  font-style: normal;
+  font-weight: 700;
+  font-size: 11px;
+  line-height: 25px;
+  /* identical to box height, or 227% */
+
+  letter-spacing: 1px;
+  text-transform: uppercase;
+}
+
+.links:hover {
+  color: orange;
+}

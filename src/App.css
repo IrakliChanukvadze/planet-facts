@@ -1,0 +1,9 @@
+* {
+  padding: 0;
+  margin: 0;
+}
+.App {
+  min-height: 100vh;
+  width: 100vw;
+  background-image: url(./assets/glowing-shinny-particles-stars-animation-on-black-background-free-video.jpg);
+}

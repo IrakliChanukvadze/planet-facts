@@ -1,0 +1,145 @@
+.planet {
+  margin: 100px 20px 0px 20px;
+}
+.imageRelCont {
+  position: relative;
+  margin-top: 100px;
+}
+.bigImage {
+  width: 250px;
+  height: 250px;
+}
+.smallImage {
+  position: absolute;
+  width: 156px;
+  height: 156px;
+  left: 44px;
+  top: 191px;
+}
+
+.title {
+  font-family: "Antonio";
+  font-style: normal;
+  font-weight: 400;
+  font-size: 80px;
+  line-height: 104px;
+  /* identical to box height */
+
+  text-transform: uppercase;
+
+  color: #ffffff;
+}
+
+.description {
+  font-family: "Spartan";
+  font-style: normal;
+  font-weight: 400;
+  font-size: 14px;
+  line-height: 25px;
+  color: #ffffff;
+}
+
+.descriptionSpan {
+  font-family: "Spartan";
+  font-style: normal;
+  font-weight: 400;
+  font-size: 14px;
+  line-height: 25px;
+  /* identical to box height, or 179% */
+
+  color: #ffffff;
+  mix-blend-mode: normal;
+  opacity: 0.5;
+  margin-right: 3px;
+}
+.descriptionLink {
+  font-family: "Spartan";
+  font-style: normal;
+  font-weight: 400;
+  font-size: 14px;
+  line-height: 25px;
+  /* identical to box height, or 179% */
+
+  color: #ffffff;
+}
+.butCont {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  margin-top: 28px;
+}
+
+.button {
+  font-family: "Spartan";
+  font-style: normal;
+  font-weight: 700;
+  font-size: 12px;
+  line-height: 25px;
+  margin-top: 16px;
+  letter-spacing: 2.57143px;
+  text-transform: uppercase;
+  color: #ffffff;
+  width: 350px;
+  height: 48px;
+  border: 1px solid #ffffff;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.button:hover {
+  background-color: rgba(216, 216, 216, 0.2);
+}
+
+.active {
+  background: #419ebb;
+}
+
+.detailsCont {
+  margin-top: 87px;
+  display: flex;
+  justify-content: space-around;
+}
+
+.detail {
+  color: #fff;
+  border: 1px solid #ffffff;
+  width: 255px;
+  height: 128px;
+  padding-left: 26px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  margin: 6px;
+}
+
+.detailSpan {
+  font-family: "Spartan";
+  font-style: normal;
+  font-weight: 700;
+  font-size: 11px;
+  line-height: 25px;
+  /* identical to box height, or 227% */
+
+  letter-spacing: 1px;
+  text-transform: uppercase;
+
+  color: #ffffff;
+
+  mix-blend-mode: normal;
+  opacity: 0.5;
+}
+
+.detailTitle {
+  font-family: "Antonio";
+  font-style: normal;
+  font-weight: 400;
+  font-size: 40px;
+  line-height: 52px;
+  /* identical to box height */
+
+  letter-spacing: -1.5px;
+  text-transform: uppercase;
+
+  color: #ffffff;
+}
