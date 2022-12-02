@@ -1,20 +1,26 @@
 .planet {
-  margin: 100px 20px 0px 20px;
+  margin: 90px 50px 0px 50px;
 }
 .imageRelCont {
   position: relative;
-  margin-top: 100px;
 }
 .bigImage {
   width: 250px;
   height: 250px;
 }
+
 .smallImage {
   position: absolute;
   width: 156px;
   height: 156px;
-  left: 44px;
+  left: 42px;
   top: 191px;
+}
+
+.textCont {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
 }
 
 .title {
@@ -37,6 +43,8 @@
   font-size: 14px;
   line-height: 25px;
   color: #ffffff;
+  width: 350px;
+  margin-top: 10px;
 }
 
 .descriptionSpan {
@@ -51,6 +59,10 @@
   mix-blend-mode: normal;
   opacity: 0.5;
   margin-right: 3px;
+}
+
+.linkCont {
+  margin-top: 10px;
 }
 .descriptionLink {
   font-family: "Spartan";
@@ -142,4 +154,70 @@
   text-transform: uppercase;
 
   color: #ffffff;
+}
+
+@media screen and (max-width: 1200px) {
+  .planet {
+    margin-top: 50px 20px 0px 20px;
+  }
+  .imageRelCont {
+    margin-top: 0px;
+  }
+  .title {
+    font-size: 48px;
+    line-height: 62px;
+  }
+
+  .textCont {
+    margin-top: 60px;
+  }
+  .butCont {
+    align-items: center;
+    margin-top: 80px;
+  }
+
+  .description {
+    width: 300px;
+  }
+  .button {
+    width: 281px;
+    height: 40px;
+  }
+  .detail {
+    width: 164px;
+    height: 88px;
+  }
+  .detailSpan {
+    font-size: 8px;
+    line-height: 16px;
+  }
+  .detailTitle {
+    font-size: 24px;
+    line-height: 31px;
+  }
+}
+
+@media screen and (max-width: 900px) {
+  .detailsCont {
+    display: none;
+  }
+  .bigImage {
+    width: 154px;
+    height: 154px;
+  }
+
+  .smallImage {
+    width: 120px;
+    height: 120px;
+    left: 17px;
+    top: 130px;
+  }
+  .textCont {
+    align-items: center;
+    margin-top: 40px;
+  }
+  .butCont {
+    align-items: center;
+    margin-top: 40px;
+  }
 }

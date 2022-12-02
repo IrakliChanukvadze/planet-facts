@@ -4,6 +4,7 @@ import React, { useEffect, useState } from "react";
 import { useParams } from "react-router-dom";
 import data from "../data/data";
 import styles from "./Planets.module.css";
+import Nav from "../components/Nav";
 
 const Planets = () => {
   const { planetId } = useParams();
@@ -26,7 +27,7 @@ const Planets = () => {
   }, [planetId]);
   return (
     <div className={styles.planet}>
-      <Grid container sx={{ mt: "92px" }}>
+      <Grid container>
         <Grid
           item
           xs={12}
@@ -54,9 +55,9 @@ const Planets = () => {
             )}
           </div>
         </Grid>
-        <Grid item md={12} lg={4} direction="row">
+        <Grid item xs={12} lg={4} sx={{ mt: "30px" }} direction="row">
           <Grid container>
-            <Grid item sm={6} lg={12}>
+            <Grid item xs={12} md={6} lg={12}>
               <div className={styles.textCont}>
                 <h3 className={styles.title}>{planet[0]?.name}</h3>
                 <p className={styles.description}>
@@ -74,12 +75,14 @@ const Planets = () => {
                 </p>
               </div>
             </Grid>
-            <Grid item sm={6} lg={12}>
+            <Grid item xs={12} md={6} lg={12}>
               <div className={styles.butCont}>
                 <div
                   className={styles.button}
                   style={
-                    text === "overview" ? { backgroundColor: "#419ebb" } : {}
+                    text === "overview"
+                      ? { backgroundColor: planet[0] && planet[0].color }
+                      : {}
                   }
                   onClick={() => {
                     setText("overview");
@@ -91,7 +94,9 @@ const Planets = () => {
                 <div
                   className={styles.button}
                   style={
-                    text === "structure" ? { backgroundColor: "#419ebb" } : {}
+                    text === "structure"
+                      ? { backgroundColor: planet[0] && planet[0].color }
+                      : {}
                   }
                   onClick={() => {
                     setText("structure");
@@ -103,7 +108,9 @@ const Planets = () => {
                 <div
                   className={styles.button}
                   style={
-                    text === "geology" ? { backgroundColor: "#419ebb" } : {}
+                    text === "geology"
+                      ? { backgroundColor: planet[0] && planet[0].color }
+                      : {}
                   }
                   onClick={() => {
                     setText("geology");
@@ -148,10 +155,3 @@ const Planets = () => {
 };
 
 export default Planets;
-//
-
-// image === "internal"
-//                   ? "structure"
-//                   : image === "geology"
-//                   ? "geology"
-//                   : "overview"

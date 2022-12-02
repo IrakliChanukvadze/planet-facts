@@ -37,3 +37,21 @@
 .links:hover {
   color: orange;
 }
+
+.image {
+  width: 30px;
+  height: 30px;
+}
+
+.imageCont {
+  display: none;
+}
+
+@media screen and (max-width: 700px) {
+  .navLinks {
+    display: none;
+  }
+  .imageCont {
+    display: block;
+  }
+}
