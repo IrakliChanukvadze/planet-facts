@@ -5,6 +5,7 @@ import { useParams } from "react-router-dom";
 import data from "../data/data";
 import styles from "./Planets.module.css";
 import Nav from "../components/Nav";
+const images = import.meta.glob("../assets/planet-venus.svg*");
 
 const Planets = () => {
   const { planetId } = useParams();
@@ -21,6 +22,11 @@ const Planets = () => {
   const setData = () => {
     setPlanet(data.filter((item) => item.name === planetId));
   };
+
+  function getImgUrl(fileName) {
+    const imgUrl = new URL(`../assets/${fileName}`, import.meta.url).href;
+    return imgUrl;
+  }
 
   useEffect(() => {
     setData();
@@ -39,17 +45,26 @@ const Planets = () => {
           }}
         >
           <div className={styles.imageRelCont}>
-            <img
+            {/* <img
               className={styles.bigImage}
               src={
                 image === "internal"
                   ? `planet-${planetId.toLowerCase()}-internal.svg`
                   : `planet-${planetId.toLowerCase()}.svg`
               }
+            /> */}
+            <img
+              className={styles.bigImage}
+              src={getImgUrl(
+                image === "internal"
+                  ? `planet-${planetId.toLowerCase()}-internal.svg`
+                  : `planet-${planetId.toLowerCase()}.svg`
+              )}
+              alt="picture"
             />
             {image === "geology" && (
               <img
-                src={`geology-${planetId.toLowerCase()}.png`}
+                src={getImgUrl(`geology-${planetId.toLowerCase()}.png`)}
                 className={styles.smallImage}
               />
             )}
