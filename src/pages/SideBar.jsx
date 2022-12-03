@@ -10,7 +10,7 @@ const SideBar = () => {
     return (
       <div
         key={planet.name}
-        onClick={() => navigate(`/${planet.name}`)}
+        onClick={() => navigate(`/planet-facts/${planet.name}`)}
         className={styles.singleDiv}
       >
         <div

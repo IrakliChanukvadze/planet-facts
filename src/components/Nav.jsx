@@ -6,7 +6,11 @@ import menuIcon from "../assets/menuIcon1.png";
 
 const Nav = () => {
   const navLinks = data.map((planet) => (
-    <NavLink key={planet.name} to={`./${planet.name}`} className={styles.links}>
+    <NavLink
+      key={planet.name}
+      to={`./planet-facts/${planet.name}`}
+      className={styles.links}
+    >
       {planet.name}
     </NavLink>
   ));
