@@ -204,6 +204,7 @@
   .bigImage {
     width: 154px;
     height: 154px;
+    margin-bottom: 40px;
   }
 
   .smallImage {
