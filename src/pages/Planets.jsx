@@ -1,16 +1,14 @@
-import { Grid, Typography } from "@mui/material";
-import { Container } from "@mui/system";
+import { Grid } from "@mui/material";
 import React, { useEffect, useState } from "react";
 import { useParams } from "react-router-dom";
 import data from "../data/data";
 import styles from "./Planets.module.css";
-import Nav from "../components/Nav";
 const images = import.meta.glob("../assets/planet-venus.svg*");
 
 const Planets = () => {
   const { planetId } = useParams();
   const [planet, setPlanet] = useState([]);
-  const [image, setImage] = useState("geology");
+  const [image, setImage] = useState("");
   const [text, setText] = useState("overview");
   console.log(planetId);
   const setData = () => {
